@@ -17,7 +17,7 @@ function HomePage() {
         setProducts(data.products)
       }
       
-    }, [])
+    }, [data])
 
     if(isLoading) return <p>Loading...</p>
     if(error) return <p>Error404...</p>
