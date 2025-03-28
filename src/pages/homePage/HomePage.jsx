@@ -4,6 +4,7 @@ import { useProducts } from '../../api/request'
 import CardComp from '../../components/cardComp/CardComp'
 import stl from './homePage.module.scss'
 import { useStoreProduct } from '../../feautures/store'
+import Header from '../../components/Header'
 
 function HomePage() {
 
@@ -33,6 +34,8 @@ function HomePage() {
     };
 
   return (
+    <div>
+      <Header/>
     <div className={stl.homePage}>
         <h2>Home Page</h2>
         <Slider range min={0} max={type === 'price' ? '500' : '5'} defaultValue={ type === 'price' ? [50,200]: [0,5]} onChange={onChange}/>
@@ -56,6 +59,7 @@ function HomePage() {
             }
 
         </div>
+    </div>
     </div>
   )
 }
