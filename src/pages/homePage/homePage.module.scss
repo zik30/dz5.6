@@ -1,0 +1,22 @@
+.homePage{
+    text-align: center;
+    margin: 20px auto;
+    width: 1000px;
+    color: rgb(37, 17, 68);
+    font-size: 40px;
+    h2{
+        margin: 0;
+    }
+    .products{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+body{
+    background-color: #e0e5ef;
+}
