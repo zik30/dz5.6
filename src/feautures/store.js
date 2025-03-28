@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 
-export const useStoreProduct = create( (set) =>({
+export const useStoreProduct = create( persist( (set) =>({
     products: [],
     cart: [],
     favourites: [],
@@ -29,4 +29,6 @@ export const useStoreProduct = create( (set) =>({
         products: state.products.map( (p) => p.id === id ? {...p, inFav: false} : p),
         cart: state.cart.map( (p) => p.id === id ? {...p, inFav: false} : p)
       }))
-    }))
+    }),
+    {name: 'productsStorage'}
+))
